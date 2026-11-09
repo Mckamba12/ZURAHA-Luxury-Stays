@@ -1,4 +1,4 @@
-# Aurelia Luxury Stays
+# ZURAHA Luxury Stays
 
 A luxury travel landing-page prototype with Hotels, Villas, Destinations, Experiences and Offers sections.
 
