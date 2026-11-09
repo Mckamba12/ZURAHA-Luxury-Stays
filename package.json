@@ -1,0 +1,11 @@
+{
+  "name": "zuraha-luxury-stays",
+  "version": "1.0.0",
+  "description": "A luxury travel landing-page prototype with Hotels, Villas, Destinations, Experiences and Offers sections.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "type": "commonjs"
+}

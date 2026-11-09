@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Explore exceptional ZURAHA luxury stays in the world's most memorable destinations.">
+	<title>Destinations | ZURAHA Luxury Stays</title>
+	<link rel="stylesheet" href="../css/destination.css">
+</head>
+<body>
+	<div class="announcement">A considered collection of extraordinary stays</div>
+	<header class="site-header">
+		<a class="brand" href="../index.html" aria-label="ZURAHA home">ZURAHA<span>LUXURY STAYS</span></a>
+		<nav class="nav-links" aria-label="Main navigation">
+			<a href="../index.html">Home</a>
+			<a class="active" href="destination.html" aria-current="page">Destinations</a>
+			<a href="#collection">Our collection</a>
+			<a class="header-cta" href="mailto:stay@zuraha.com">Plan your stay</a>
+		</nav>
+	</header>
+
+	<section class="hero" aria-labelledby="page-title">
+		<div class="hero-content">
+			<p class="eyebrow">Places that stay with you</p>
+			<h1 id="page-title">Find your somewhere</h1>
+			<p class="hero-copy">From sunlit coastlines to storied city streets, discover a stay shaped by the spirit of its destination.</p>
+		</div>
+	</section>
+
+	<form class="search-panel" action="#collection" method="get">
+		<div class="search-field">
+			<label for="destination">Destination</label>
+			<input id="destination" name="destination" type="search" placeholder="Where would you like to go?">
+		</div>
+		<div class="search-field">
+			<label for="arrival">Check in</label>
+			<input id="arrival" name="arrival" type="date" aria-label="Check-in date">
+		</div>
+		<div class="search-field">
+			<label for="departure">Check out</label>
+			<input id="departure" name="departure" type="date" aria-label="Check-out date">
+		</div>
+		<button class="search-button" type="submit">Explore stays</button>
+	</form>
+
+	<main id="collection">
+		<div class="section-heading">
+			<div>
+				<p class="eyebrow">A world of possibility</p>
+				<h2>Explore our destinations</h2>
+			</div>
+			<p>Each place in our collection is chosen for its character, its sense of place, and the moments waiting to be made there.</p>
+		</div>
+
+		<div class="destination-grid">
+			<a class="destination-card" href="#featured">
+				<div class="card-image">
+					<img src="https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?auto=format&fit=crop&w=1000&q=85" alt="Colorful buildings along the Amalfi Coast" loading="lazy">
+					<span class="card-tag">Coastal escapes</span>
+				</div>
+				<div class="card-details"><div><h3>Amalfi Coast</h3><p>Italy · Mediterranean</p></div><span class="stay-count">12 stays</span></div>
+			</a>
+			<a class="destination-card" href="#featured">
+				<div class="card-image">
+					<img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1000&q=85" alt="Paris rooftops beneath the Eiffel Tower" loading="lazy">
+					<span class="card-tag">City hideaways</span>
+				</div>
+				<div class="card-details"><div><h3>Paris</h3><p>France · Île-de-France</p></div><span class="stay-count">8 stays</span></div>
+			</a>
+			<a class="destination-card" href="#featured">
+				<div class="card-image">
+					<img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1000&q=85" alt="Palm-fringed tropical beach and turquoise water" loading="lazy">
+					<span class="card-tag">Island living</span>
+				</div>
+				<div class="card-details"><div><h3>Bali</h3><p>Indonesia · Indian Ocean</p></div><span class="stay-count">16 stays</span></div>
+			</a>
+			<a class="destination-card" href="#featured">
+				<div class="card-image">
+					<img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1000&q=85" alt="Traditional whitewashed architecture in Santorini" loading="lazy">
+					<span class="card-tag">Island living</span>
+				</div>
+				<div class="card-details"><div><h3>Santorini</h3><p>Greece · Aegean Sea</p></div><span class="stay-count">9 stays</span></div>
+			</a>
+			<a class="destination-card" href="#featured">
+				<div class="card-image">
+					<img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=1000&q=85" alt="Dubai skyline rising above the desert city" loading="lazy">
+					<span class="card-tag">Modern icons</span>
+				</div>
+				<div class="card-details"><div><h3>Dubai</h3><p>United Arab Emirates · Gulf</p></div><span class="stay-count">11 stays</span></div>
+			</a>
+			<a class="destination-card" href="#featured">
+				<div class="card-image">
+					<img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1000&q=85" alt="A quiet stretch of tropical coastline" loading="lazy">
+					<span class="card-tag">Coastal escapes</span>
+				</div>
+				<div class="card-details"><div><h3>Maldives</h3><p>Indian Ocean · South Asia</p></div><span class="stay-count">14 stays</span></div>
+			</a>
+		</div>
+
+		<section class="feature" id="featured" aria-labelledby="feature-title">
+			<div class="feature-image" role="img" aria-label="Mediterranean island coastline at sunset"></div>
+			<div class="feature-copy">
+				<p class="eyebrow">The ZURAHA difference</p>
+				<h2 id="feature-title">More than a place to stay</h2>
+				<p>Our local specialists uncover the details that make a destination unforgettable, pairing thoughtful stays with the people and places that bring it to life.</p>
+				<a class="text-link" href="mailto:stay@zuraha.com">Let us plan your escape</a>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<a class="brand" href="../index.html">ZURAHA</a>
+		<p>Exceptional stays, thoughtfully found.</p>
+		<div class="footer-links"><a href="mailto:stay@zuraha.com">Contact</a><a href="#collection">Destinations</a></div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover exceptional hotels, private villas and luxury resorts with Zuraha Luxury Stays.">
+    <title>ZURAHA | Luxury Meets The Extraordinary</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="#" class="logo" aria-label="Zuraha home">ZURAHA</a>
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="./pages/villas.html" class="active" target="_blank">Villas</a>
+            <a href="#hotels" class="active" target="_blank">Destinations</a>
+            <a href="#hotels" class="active" target="_blank">Experiences</a>
+            <a href="#hotels" class="active" target="_blank">Hotels</a>
+            <a href="#hotels" class="active" target="_blank">offers</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="nav-button" type="button" id="signInButton"><a href="./pages/signin.html" target="_blank">Sign in</a></button>
+            <button class="nav-button" type="button" id="signUpButton"><a href="./pages/signup.html" target="_blank">Sign up</a></button>
+        </div>
+    </header>
+    <main>
+        <section class="hero" id="hotels">
+            <div class="hero-content">
+                <p class="eyebrow">DISCOVER YOUR NEXT EXTRAORDINARY ESCAPE</p>
+                <h1>Where Luxury Meets The Extraordinary</h1>
+
+                <p class="hero-description">Discover exceptional stays, private escapes and unforgettable experiences curated for travellers who appreciate the extraordinary.</p>
+                <a href="booking" class="explore-button">Explore Stays <span aria-hidden="true">↗</span></a>
+            </div>
+            <form class="booking-panel" id="bookingForm">
+                <div class="booking-header">
+                    <div>
+                        <h2 class="booking-title">Luxury Stays</h2>
+                        <p class="booking-subtitle">Find your perfect escape.</p>
+                    </div>
+
+                    <div class="stay-tabs" role="group" aria-label="stay type">
+                        <button type="button" class="stay-tab active" data-type="Hotel" aria-pressed="true">Hotel</button>
+                        <button type="button" class="stay-tab active" data-type="Villas" aria-pressed="true">Villas</button>
+                        <button type="button" class="stay-tab active" data-type="Resorts" aria-pressed="true">Resorts</button>
+                    </div>
+                </div>
+
+                <div class="booking-fields">
+                    <div class="field">
+                        <label for="destination">Destination</label>
+                     <input type="test" id="destination" name="destination" placeholder="e.g. Harare" autocomplete="off" required>
+                    </div>
+                    <div class="booking-fields">
+                        <div class="field">
+                            <label for="checkin">Check-in</label>
+                            <input type="date" id="checkin" name="checkin" required>
+                        </div>
+                        <div class="booking-fields">
+                            <div class="field">
+                                <label for="guests">Guests</label>
+                                <select name="guests" id="guests">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="rooms">Rooms</label>
+                                <select name="rooms" id="rooms">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button class="search-button" type="submit">Search Stays</button>
+
+                        <p class="form-message" id="formMessage" role="status" aria-Live="polite"></p>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <section id="destinations" hidden></section>
+        <section id="experiences" hidden></section>
+        <section id="offers" hidden></section>
+    </main>
+    <script src="./js/main.js"></script>
+</body>
+</html>

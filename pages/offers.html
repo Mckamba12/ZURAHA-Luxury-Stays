@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#f6f3ed">
+	<meta name="description" content="Discover thoughtfully curated stays, local tours and memorable experiences with Zuraha Luxury Stays.">
+	<title>Offers & Experiences | Zuraha Luxury Stays</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+	<style>
+		:root{--ink:#202a25;--muted:#69736c;--green:#415b4b;--sage:#dfe6dc;--cream:#f6f3ed;--white:#fff;--line:#e6e3dc;--gold:#b58d58;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif}
+		*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.6}a{color:inherit;text-decoration:none}img{display:block;width:100%;object-fit:cover}button{font:inherit}.wrap{width:min(1160px,calc(100% - 48px));margin:auto}.eyebrow{display:flex;align-items:center;gap:10px;color:var(--green);font-size:.72rem;font-weight:700;letter-spacing:.17em;text-transform:uppercase}.eyebrow:before{content:'';width:25px;height:1px;background:var(--gold)}
+		header{height:82px;display:flex;align-items:center;border-bottom:1px solid rgba(32,42,37,.08);background:var(--cream)}.nav{display:flex;align-items:center;justify-content:space-between}.brand{font-family:var(--serif);font-size:1.5rem;letter-spacing:.02em}.brand small{display:block;margin-top:-5px;color:var(--muted);font:500 .54rem var(--sans);letter-spacing:.24em;text-transform:uppercase}.nav-links{display:flex;align-items:center;gap:32px;font-size:.83rem}.nav-links a:not(.nav-cta){color:#536057}.nav-links a:hover{color:var(--gold)}.nav-cta,.button{display:inline-flex;justify-content:center;align-items:center;gap:10px;padding:12px 19px;background:var(--green);color:white;border:1px solid var(--green);font-size:.78rem;letter-spacing:.04em;transition:.2s}.nav-cta:hover,.button:hover{background:#304437;border-color:#304437}.menu-toggle{display:none;border:0;background:none;color:var(--ink);font-size:1.5rem}
+		.hero{position:relative;min-height:540px;display:grid;align-items:end;overflow:hidden;background:#33433a;color:white}.hero:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,30,24,.75),rgba(18,30,24,.1) 90%),linear-gradient(0deg,rgba(18,30,24,.38),transparent 55%),url('https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=2000&q=85') center 53%/cover}.hero-content{position:relative;z-index:1;padding:80px 0 72px;max-width:680px}.hero .eyebrow{color:#e1c59c}.hero h1{max-width:660px;margin:17px 0 16px;font:400 clamp(3rem,7vw,5.25rem)/1.04 var(--serif);letter-spacing:-.03em}.hero p{max-width:510px;margin:0 0 28px;color:rgba(255,255,255,.85);font-size:1rem}.hero .button{background:#f6f3ed;color:var(--ink);border-color:#f6f3ed}.hero .button:hover{background:white}.hero-note{position:absolute;right:0;bottom:40px;color:rgba(255,255,255,.78);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase}
+		.intro{padding:90px 0 45px;text-align:center}.intro .eyebrow{justify-content:center}.intro h2,.section-heading h2{margin:13px 0 12px;font:400 clamp(2.1rem,4vw,3.35rem)/1.15 var(--serif);letter-spacing:-.02em}.intro p{max-width:640px;margin:0 auto;color:var(--muted)}
+		.offers{padding:25px 0 88px}.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.offer-card{background:var(--white);border:1px solid rgba(32,42,37,.07);transition:transform .25s,box-shadow .25s}.offer-card:hover{transform:translateY(-5px);box-shadow:0 14px 35px rgba(35,48,39,.1)}.offer-image{height:240px;position:relative;overflow:hidden}.offer-image img{height:100%;transition:transform .5s}.offer-card:hover .offer-image img{transform:scale(1.04)}.tag{position:absolute;top:15px;left:15px;background:rgba(246,243,237,.94);padding:7px 10px;color:var(--green);font-size:.64rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.offer-body{padding:22px 22px 20px}.offer-meta{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:.72rem;letter-spacing:.04em;text-transform:uppercase}.offer-body h3{margin:10px 0 8px;font:500 1.45rem var(--serif)}.offer-body p{min-height:52px;margin:0;color:var(--muted);font-size:.87rem}.offer-footer{display:flex;justify-content:space-between;align-items:center;margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}.price{font:500 1.05rem var(--serif)}.price small{font:400 .68rem var(--sans);color:var(--muted)}.text-link{color:var(--green);font-size:.77rem;font-weight:700}.text-link span{margin-left:5px}
+		.experiences{padding:82px 0;background:#e8ece5}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:32px}.section-heading p{max-width:390px;margin:0 0 6px;color:var(--muted);font-size:.9rem}.experience-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.experience{position:relative;min-height:280px;overflow:hidden;color:white;background:#56685b}.experience img{position:absolute;inset:0;height:100%;transition:transform .45s}.experience:hover img{transform:scale(1.06)}.experience:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,26,20,.78),transparent 68%)}.experience-copy{position:absolute;z-index:1;left:19px;right:15px;bottom:17px}.experience-copy span{font-size:.64rem;letter-spacing:.15em;text-transform:uppercase;color:#e5cda9}.experience-copy h3{margin:5px 0 0;font:500 1.35rem var(--serif)}
+		.gallery{padding:88px 0}.gallery-top{display:flex;justify-content:space-between;align-items:end;margin-bottom:25px}.gallery-top p{color:var(--muted);font-size:.84rem}.gallery-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr 1.2fr;grid-template-rows:185px 185px;gap:12px}.gallery-grid img{height:100%;cursor:zoom-in}.gallery-grid img:first-child{grid-row:span 2}.gallery-grid img:last-child{grid-column:span 2}
+		.journal{padding:83px 0 92px;background:#fff}.journal .section-heading{margin-bottom:28px}.journal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.quote{padding:26px 25px 23px;background:var(--cream)}.stars{color:var(--gold);letter-spacing:.15em;font-size:.84rem}.quote blockquote{margin:15px 0 22px;font:400 1.1rem/1.55 var(--serif)}.guest{display:flex;align-items:center;gap:12px}.avatar{width:39px;height:39px;border-radius:50%;object-fit:cover}.guest strong{display:block;font-size:.77rem}.guest span{display:block;color:var(--muted);font-size:.68rem}.journal-disclaimer{margin:17px 0 0;color:var(--muted);font-size:.7rem}
+		.closing{padding:70px 0;background:var(--green);color:white;text-align:center}.closing .eyebrow{justify-content:center;color:#e1c59c}.closing h2{margin:14px 0;font:400 clamp(2rem,4vw,3.1rem) var(--serif)}.closing p{margin:0 auto 23px;max-width:520px;color:rgba(255,255,255,.78);font-size:.9rem}.closing .button{background:transparent;border-color:rgba(255,255,255,.65)}.closing .button:hover{background:white;color:var(--green)}footer{padding:25px 0;background:#24352b;color:rgba(255,255,255,.7);font-size:.72rem}.footer-inner{display:flex;justify-content:space-between;gap:20px}.footer-links{display:flex;gap:20px}footer a:hover{color:white}
+		@media(max-width:850px){.nav-links{gap:18px}.experience-grid{grid-template-columns:repeat(2,1fr)}.experience{min-height:250px}.gallery-grid{grid-template-rows:150px 150px}.section-heading{align-items:start;flex-direction:column;gap:8px}}
+		@media(max-width:620px){.wrap{width:min(100% - 36px,1160px)}header{height:72px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;z-index:5;top:72px;left:0;right:0;padding:20px 24px;background:var(--cream);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:17px}.nav-links.open{display:flex}.nav-cta{text-align:center}.hero{min-height:510px}.hero-content{padding:65px 0 70px}.hero-note{right:0;bottom:20px;font-size:.58rem}.intro{padding:68px 0 30px}.offers{padding-bottom:65px}.card-grid,.journal-grid{grid-template-columns:1fr}.offer-image{height:230px}.offer-body p{min-height:unset}.experiences,.gallery,.journal{padding:65px 0}.experience-grid{gap:10px}.experience{min-height:215px}.experience-copy{left:13px;bottom:12px}.experience-copy h3{font-size:1.1rem}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:140px 140px 140px;gap:8px}.gallery-grid img:first-child{grid-row:auto}.gallery-grid img:last-child{grid-column:span 2}.gallery-top{align-items:start;flex-direction:column;gap:4px}.gallery-top p{margin:0}.journal-grid{gap:12px}.footer-inner{flex-direction:column}.footer-links{flex-wrap:wrap}}
+		@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+	</style>
+</head>
+<body>
+	<header>
+		<nav class="nav wrap" aria-label="Main navigation">
+			<a class="brand" href="index.html">ZURAHA<small>Luxury stays</small></a>
+			<button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links">☰</button>
+			<div class="nav-links" id="nav-links">
+				<a href="index.html">Stay</a><a href="#experiences">Experiences</a><a href="#gallery">Gallery</a><a href="#journal">Guest journal</a><a class="nav-cta" href="#offers">Explore offers <span aria-hidden="true">↗</span></a>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<section class="hero" aria-labelledby="hero-title">
+			<div class="wrap hero-content">
+				<div class="eyebrow">A little more than a getaway</div>
+				<h1 id="hero-title">Find your way into the local story.</h1>
+				<p>Slow mornings, hidden corners and the people who make this place unforgettable. Your next experience starts here.</p>
+				<a class="button" href="#offers">Discover our experiences <span aria-hidden="true">↓</span></a>
+			</div>
+			<span class="hero-note wrap">Thoughtfully hosted, always local</span>
+		</section>
+
+		<section class="intro wrap" id="offers">
+			<div class="eyebrow">Stay a little longer</div>
+			<h2>Experiences with a sense of place</h2>
+			<p>From a table set just for two to a day spent wandering with a local, our curated packages make it easy to see the town at your own pace.</p>
+		</section>
+		<section class="offers wrap" aria-label="Featured packages">
+			<div class="card-grid">
+				<article class="offer-card">
+					<div class="offer-image"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80" alt="An intimate candlelit dinner table" loading="lazy"><span class="tag">For two</span></div>
+					<div class="offer-body"><div class="offer-meta"><span>Dining · 3 hours</span><span>✦ Signature</span></div><h3>The Long Table Evening</h3><p>A seasonal tasting menu, a candlelit setting and a host who knows every story behind the dish.</p><div class="offer-footer"><span class="price">From $145 <small>/ couple</small></span><a class="text-link" href="mailto:concierge@zuraha.com?subject=The%20Long%20Table%20Evening">Enquire <span>→</span></a></div></div>
+				</article>
+				<article class="offer-card">
+					<div class="offer-image"><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=80" alt="A winding trail through a scenic landscape" loading="lazy"><span class="tag">Small group</span></div>
+					<div class="offer-body"><div class="offer-meta"><span>Outdoors · Half day</span><span>✦ Local guide</span></div><h3>Paths Less Travelled</h3><p>Follow quiet trails and scenic viewpoints with a local guide, with plenty of time to stop and take it all in.</p><div class="offer-footer"><span class="price">From $68 <small>/ person</small></span><a class="text-link" href="mailto:concierge@zuraha.com?subject=Paths%20Less%20Travelled">Enquire <span>→</span></a></div></div>
+				</article>
+				<article class="offer-card">
+					<div class="offer-image"><img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=900&q=80" alt="A welcoming neighborhood café" loading="lazy"><span class="tag">A local favorite</span></div>
+					<div class="offer-body"><div class="offer-meta"><span>Culture · 2 hours</span><span>✦ Easy pace</span></div><h3>Coffee, Corners & Character</h3><p>Meet the makers, find the best little cafés and discover the details you'd miss on your own.</p><div class="offer-footer"><span class="price">From $42 <small>/ person</small></span><a class="text-link" href="mailto:concierge@zuraha.com?subject=Coffee%2C%20Corners%20%26%20Character">Enquire <span>→</span></a></div></div>
+				</article>
+			</div>
+		</section>
+
+		<section class="experiences" id="experiences">
+			<div class="wrap">
+				<div class="section-heading"><div><div class="eyebrow">Make a day of it</div><h2>Little moments, lasting memories</h2></div><p>Choose your own rhythm. We’ll take care of the thoughtful details and connect you with the people who know this place best.</p></div>
+				<div class="experience-grid">
+					<a class="experience" href="mailto:concierge@zuraha.com?subject=Market%20Morning"><img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=700&q=80" alt="Colorful fresh produce at a local market" loading="lazy"><div class="experience-copy"><span>Food & community</span><h3>Market morning</h3></div></a>
+					<a class="experience" href="mailto:concierge@zuraha.com?subject=Old%20Town%20Wander"><img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=700&q=80" alt="Historic architecture in the warm evening light" loading="lazy"><div class="experience-copy"><span>History & heritage</span><h3>Old town wander</h3></div></a>
+					<a class="experience" href="mailto:concierge@zuraha.com?subject=Waterfront%20Escape"><img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=700&q=80" alt="Soft waves rolling onto a quiet shore" loading="lazy"><div class="experience-copy"><span>Outdoors & fresh air</span><h3>Waterfront escape</h3></div></a>
+					<a class="experience" href="mailto:concierge@zuraha.com?subject=Creative%20Afternoon"><img src="https://images.unsplash.com/photo-1455390582262-044cdeel?auto=format&fit=crop&w=700&q=80" alt="A creative workspace ready for an afternoon workshop" loading="lazy"><div class="experience-copy"><span>Arts & makers</span><h3>Creative afternoon</h3></div></a>
+				</div>
+			</div>
+		</section>
+
+		<section class="gallery wrap" id="gallery">
+			<div class="gallery-top"><div><div class="eyebrow">A glimpse of here</div><h2 class="section-heading" style="display:block;margin:10px 0 0">The town, through our eyes</h2></div><p>Good places have a way of staying with you.</p></div>
+			<div class="gallery-grid" aria-label="A gallery of local scenes">
+				<img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=850&q=80" alt="Colorful hillside town overlooking the water" loading="lazy">
+				<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=650&q=80" alt="A softly lit neighborhood restaurant" loading="lazy">
+				<img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=650&q=80" alt="A peaceful mountain lake and trail" loading="lazy">
+				<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80" alt="A sunlit landscape on the edge of town" loading="lazy">
+			</div>
+		</section>
+
+		<section class="journal" id="journal">
+			<div class="wrap">
+				<div class="section-heading"><div><div class="eyebrow">Notes from the journey</div><h2>In their own words</h2></div><p>The best recommendations come from those who’ve just been.</p></div>
+				<div class="journal-grid">
+					<article class="quote"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“The market walk was the highlight of our trip. We met lovely people, tasted things we’d never have found, and felt like locals for a morning.”</blockquote><div class="guest"><img class="avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="" loading="lazy"><div><strong>Amelia R.</strong><span>Market Morning · March 2025</span></div></div></article>
+					<article class="quote"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“A beautiful pace, a brilliant guide and views we’ll remember forever. The team made every detail feel effortless.”</blockquote><div class="guest"><img class="avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="" loading="lazy"><div><strong>Daniel & Sam</strong><span>Paths Less Travelled · February 2025</span></div></div></article>
+					<article class="quote"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“That dinner felt personal in the loveliest way. Every course had a story, and our host made the evening feel like a gathering at a friend's home.”</blockquote><div class="guest"><img class="avatar" src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=100&q=80" alt="" loading="lazy"><div><strong>Priya K.</strong><span>The Long Table Evening · January 2025</span></div></div></article>
+				</div>
+				<p class="journal-disclaimer">Guest reflections are shared with permission. Experiences and availability may vary by season.</p>
+			</div>
+		</section>
+		<section class="closing"><div class="wrap"><div class="eyebrow">Your stay, your story</div><h2>Let’s find your kind of adventure.</h2><p>Tell us what you love. Our local team will help shape an experience that feels just right for you.</p><a class="button" href="mailto:concierge@zuraha.com?subject=Plan%20my%20experience">Talk to our concierge <span aria-hidden="true">↗</span></a></div></section>
+	</main>
+	<footer><div class="wrap footer-inner"><span>© 2025 Zuraha Luxury Stays · Made for meaningful escapes.</span><div class="footer-links"><a href="index.html">Home</a><a href="#offers">Packages</a><a href="mailto:concierge@zuraha.com">Contact</a></div></div></footer>
+	<script>
+		const menuButton=document.querySelector('.menu-toggle');
+		const navLinks=document.querySelector('#nav-links');
+		menuButton.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')==='true';menuButton.setAttribute('aria-expanded',String(!open));menuButton.setAttribute('aria-label',open?'Open navigation':'Close navigation');navLinks.classList.toggle('open',!open)});
+		navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','Open navigation');navLinks.classList.remove('open')}));
+	</script>
+</body>
+</html>
