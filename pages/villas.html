@@ -1,16 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aurelia | Villas</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Discover ZURAHA's collection of exceptional private villas, from oceanfront retreats to secluded island escapes.">
+	<title>Private Villas | ZURAHA Luxury Stays</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+	<style>
+		:root{--ink:#1d2925;--muted:#69736c;--green:#29493e;--sand:#f5f3ed;--line:#e6e5de;--gold:#b39a69}
+		*{box-sizing:border-box}
+		html{scroll-behavior:smooth}
+		body{margin:0;color:var(--ink);font-family:'DM Sans',sans-serif;background:#fff}
+		a{color:inherit;text-decoration:none}
+		.topbar{height:82px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.22);position:absolute;z-index:2;top:0;width:100%;color:#fff}
+		.brand{font-family:'Playfair Display',serif;font-size:27px;letter-spacing:5px;font-weight:500}
+		.nav{display:flex;gap:32px;align-items:center;font-size:13px}
+		.nav a{transition:opacity .2s}.nav a:hover{opacity:.7}
+		.nav .contact{border:1px solid rgba(255,255,255,.7);padding:11px 18px}
+		.hero{min-height:570px;height:76vh;max-height:740px;position:relative;display:flex;align-items:flex-end;color:#fff;background:linear-gradient(90deg,rgba(13,25,21,.58),rgba(13,25,21,.08)),linear-gradient(0deg,rgba(13,25,21,.42),transparent 60%),url('https://images.unsplash.com/photo-1613491167987-5e8e3d8f6c0b?auto=format&fit=crop&w=2200&q=85') center 55%/cover}
+		.hero-copy{padding:0 10% 88px;max-width:880px}
+		.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:3px;color:var(--gold);font-weight:700}
+		h1,h2,h3,p{margin-top:0}
+		h1{font:400 clamp(46px,7vw,82px)/1.04 'Playfair Display',serif;margin:17px 0 18px;max-width:720px}
+		.hero-copy p{font-size:16px;line-height:1.75;max-width:520px;color:rgba(255,255,255,.88);margin-bottom:28px}
+		.button{display:inline-block;background:var(--green);color:white;padding:15px 23px;font-size:12px;letter-spacing:.5px;transition:background .2s}
+		.button:hover{background:#1b352c}
+		.hero .button{background:#fff;color:var(--ink)}
+		.intro{padding:83px 8% 52px;text-align:center;max-width:920px;margin:auto}
+		.intro h2,.section-heading h2{font:400 clamp(34px,4vw,48px)/1.2 'Playfair Display',serif;margin:14px 0}
+		.intro p{font-size:15px;color:var(--muted);line-height:1.8;max-width:660px;margin:0 auto}
+		.listing{padding:25px 7% 92px}
+		.section-heading{display:flex;justify-content:space-between;align-items:end;margin-bottom:28px}
+		.section-heading h2{margin-bottom:0}
+		.section-heading p{color:var(--muted);font-size:13px;margin:0 0 4px}
+		.villa-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+		.card{min-width:0}
+		.photo{height:280px;position:relative;overflow:hidden;background:#e8e7df}
+		.photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+		.card:hover .photo img{transform:scale(1.04)}
+		.tag{position:absolute;left:15px;top:15px;background:rgba(255,255,255,.94);padding:8px 11px;text-transform:uppercase;letter-spacing:1px;font-size:9px;font-weight:700}
+		.card-info{padding:18px 2px 6px}
+		.location{font-size:10px;text-transform:uppercase;letter-spacing:1.7px;color:var(--muted);margin-bottom:8px}
+		.card h3{font:500 24px 'Playfair Display',serif;margin:0 0 9px}
+		.details{font-size:12px;color:var(--muted);display:flex;gap:9px;align-items:center}
+		.dot{width:3px;height:3px;background:var(--gold);border-radius:50%}
+		.card-bottom{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);margin-top:17px;padding-top:14px;font-size:12px}
+		.price strong{font-size:16px;color:var(--ink)}
+		.view{color:var(--green);font-weight:700;letter-spacing:.3px}
+		.feature{margin:0 7% 90px;background:var(--sand);display:grid;grid-template-columns:1fr 1fr;min-height:390px}
+		.feature img{width:100%;height:100%;min-height:390px;object-fit:cover}
+		.feature-copy{padding:55px 11%;align-self:center}
+		.feature-copy h2{font:400 38px/1.2 'Playfair Display',serif;margin:14px 0}
+		.feature-copy p{color:var(--muted);font-size:14px;line-height:1.8;margin-bottom:23px}
+		.closing{text-align:center;background:var(--green);color:#fff;padding:68px 20px}
+		.closing h2{font:400 clamp(32px,4vw,46px) 'Playfair Display',serif;margin:12px 0}
+		.closing p{color:rgba(255,255,255,.75);font-size:14px;margin-bottom:24px}
+		.closing .button{background:#fff;color:var(--ink)}
+		footer{padding:25px 7%;display:flex;justify-content:space-between;align-items:center;font-size:11px;color:var(--muted)}
+		footer .brand{font-size:19px;color:var(--ink)}
+		.footer-links{display:flex;gap:20px}
+		@media(max-width:900px){.topbar{padding:0 5%}.nav{gap:17px}.villa-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.photo{height:260px}}
+		@media(max-width:620px){.topbar{height:70px}.brand{font-size:21px;letter-spacing:3px}.nav{gap:0}.nav a:not(.contact){display:none}.nav .contact{padding:9px 12px}.hero{height:680px;min-height:0;background-position:58% center}.hero-copy{padding:0 7% 65px}.hero-copy p{font-size:14px}.intro{padding:63px 7% 38px}.listing{padding:20px 6% 65px}.section-heading{display:block}.section-heading p{margin-top:8px}.villa-grid{grid-template-columns:1fr;gap:30px}.photo{height:280px}.feature{margin:0 6% 65px;grid-template-columns:1fr}.feature img{min-height:260px;height:260px}.feature-copy{padding:38px 8%}.feature-copy h2{font-size:32px}footer{gap:18px;flex-wrap:wrap}.footer-links{gap:13px}}
+	</style>
 </head>
 <body>
-    <header>
-        <h1 class="header-main">Welcome To Villas Page</h1>
-    </header>
-    <main class="main-content">
-        <p>Test Page is Empty</p>
-    </main>
+	<header class="topbar">
+		<a class="brand" href="../index.html" aria-label="ZURAHA home">ZURAHA</a>
+		<nav class="nav" aria-label="Main navigation">
+			<a href="../index.html">Home</a>
+			<a href="destinations.html">Destinations</a>
+			<a href="villas.html" aria-current="page">Villas</a>
+			<a href="experiences.html">Experiences</a>
+			<a class="contact" href="contact.html">Plan your stay</a>
+		</nav>
+	</header>
+
+	<main>
+		<section class="hero" aria-label="Luxury villa overlooking the sea">
+			<div class="hero-copy">
+				<span class="eyebrow">A collection of extraordinary stays</span>
+				<h1>Find your own<br>private paradise.</h1>
+				<p>Considered design, a sense of place, and room to truly unwind. Discover a villa made for the way you want to travel.</p>
+				<a class="button" href="#our-villas">Explore the collection&nbsp; →</a>
+			</div>
+		</section>
+
+		<section class="intro">
+			<span class="eyebrow">The ZURAHA villa edit</span>
+			<h2>Some places stay with you.</h2>
+			<p>From barefoot island hideaways to contemporary coastal homes, every villa is handpicked for its character, setting, and thoughtful details. Your next unforgettable escape starts here.</p>
+		</section>
+
+		<section class="listing" id="our-villas">
+			<div class="section-heading">
+				<div><span class="eyebrow">Stay somewhere special</span><h2>Our villas</h2></div>
+				<p>Handpicked homes. Unforgettable settings.</p>
+			</div>
+			<div class="villa-grid">
+				<article class="card">
+					<a href="contact.html" aria-label="Enquire about Casa Solana">
+						<div class="photo"><img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1100&q=85" alt="Modern white villa with a private pool in a tropical garden" loading="lazy"><span class="tag">Ocean view</span></div>
+						<div class="card-info"><div class="location">Uluwatu · Bali</div><h3>Casa Solana</h3><div class="details"><span>4 bedrooms</span><span class="dot"></span><span>Up to 8 guests</span></div><div class="card-bottom"><span class="price">From <strong>$620</strong> / night</span><span class="view">Enquire&nbsp; →</span></div></div>
+					</a>
+				</article>
+				<article class="card">
+					<a href="contact.html" aria-label="Enquire about Villa Azzurra">
+						<div class="photo"><img src="https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?auto=format&fit=crop&w=1100&q=85" alt="Mediterranean villa terrace overlooking the blue sea" loading="lazy"><span class="tag">Guest favourite</span></div>
+						<div class="card-info"><div class="location">Paros · Greece</div><h3>Villa Azzurra</h3><div class="details"><span>3 bedrooms</span><span class="dot"></span><span>Up to 6 guests</span></div><div class="card-bottom"><span class="price">From <strong>$480</strong> / night</span><span class="view">Enquire&nbsp; →</span></div></div>
+					</a>
+				</article>
+				<article class="card">
+					<a href="contact.html" aria-label="Enquire about The Palm House">
+						<div class="photo"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=85" alt="Architect-designed villa framed by lush tropical greenery" loading="lazy"><span class="tag">Secluded retreat</span></div>
+						<div class="card-info"><div class="location">Ubud · Bali</div><h3>The Palm House</h3><div class="details"><span>2 bedrooms</span><span class="dot"></span><span>Up to 4 guests</span></div><div class="card-bottom"><span class="price">From <strong>$350</strong> / night</span><span class="view">Enquire&nbsp; →</span></div></div>
+					</a>
+				</article>
+				<article class="card">
+					<a href="contact.html" aria-label="Enquire about Casa Luma">
+						<div class="photo"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1100&q=85" alt="Elegant villa with sunlit architecture and a serene pool" loading="lazy"><span class="tag">Design-led</span></div>
+						<div class="card-info"><div class="location">Tulum · Mexico</div><h3>Casa Luma</h3><div class="details"><span>3 bedrooms</span><span class="dot"></span><span>Up to 6 guests</span></div><div class="card-bottom"><span class="price">From <strong>$540</strong> / night</span><span class="view">Enquire&nbsp; →</span></div></div>
+					</a>
+				</article>
+				<article class="card">
+					<a href="contact.html" aria-label="Enquire about Villa Mare">
+						<div class="photo"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1100&q=85" alt="Warm, refined villa interior opening onto a private garden" loading="lazy"><span class="tag">Family escape</span></div>
+						<div class="card-info"><div class="location">Canggu · Bali</div><h3>Villa Mare</h3><div class="details"><span>5 bedrooms</span><span class="dot"></span><span>Up to 10 guests</span></div><div class="card-bottom"><span class="price">From <strong>$710</strong> / night</span><span class="view">Enquire&nbsp; →</span></div></div>
+					</a>
+				</article>
+				<article class="card">
+					<a href="contact.html" aria-label="Enquire about Casa Calma">
+						<div class="photo"><img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1100&q=85" alt="Private luxury villa set among palms with a clear blue pool" loading="lazy"><span class="tag">Private pool</span></div>
+						<div class="card-info"><div class="location">Phuket · Thailand</div><h3>Casa Calma</h3><div class="details"><span>4 bedrooms</span><span class="dot"></span><span>Up to 8 guests</span></div><div class="card-bottom"><span class="price">From <strong>$590</strong> / night</span><span class="view">Enquire&nbsp; →</span></div></div>
+					</a>
+				</article>
+			</div>
+		</section>
+
+		<section class="feature">
+			<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85" alt="A calm, light-filled villa living space" loading="lazy">
+			<div class="feature-copy"><span class="eyebrow">More than a place to stay</span><h2>Every detail, thoughtfully considered.</h2><p>Our local hosts bring each stay to life, with insider recommendations, tailored touches, and the freedom to make the place your own.</p><a class="button" href="experiences.html">Discover our experiences&nbsp; →</a></div>
+		</section>
+
+		<section class="closing">
+			<span class="eyebrow">Your next escape begins here</span>
+			<h2>Let us find your somewhere.</h2>
+			<p>Tell us what you’re dreaming of. We’ll take care of the details.</p>
+			<a class="button" href="contact.html">Plan your stay&nbsp; →</a>
+		</section>
+	</main>
+
+	<footer>
+		<a class="brand" href="../index.html">ZURAHA</a>
+		<span>Exceptional stays, thoughtfully found.</span>
+		<div class="footer-links"><a href="destinations.html">Destinations</a><a href="villas.html">Villas</a><a href="experiences.html">Experiences</a><a href="contact.html">Contact</a></div>
+	</footer>
 </body>
 </html>
