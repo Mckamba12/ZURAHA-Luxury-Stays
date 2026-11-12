@@ -2,10 +2,19 @@
   "name": "zuraha-luxury-stays",
   "version": "1.0.0",
   "description": "A luxury travel landing-page prototype with Hotels, Villas, Destinations, Experiences and Offers sections.",
-  "main": "index.js",
+  "main": "server/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/server.js",
+    "db:init": "node scripts/init_db.js",
+    "db:init:py": "python scripts/init_db.py",
+    "db:summary:py": "python scripts/init_db.py --summary",
+    "test": "node -e \"const db = require('./server/db.js'); console.log('DB Healthy. Hotels count:', db.getStats().total_hotels);\""
   },
-  "keywords": [],
+  "keywords": [
+    "luxury-stays",
+    "hospitality",
+    "sqlite",
+    "zuraha"
+  ],
   "type": "commonjs"
 }
